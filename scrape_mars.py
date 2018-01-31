@@ -172,6 +172,9 @@ def scrape():
             break
 
 
+    # Add the weather to the dictionary
+    mars_data["mars_weather"] = latest_weather
+    
     # ## Mars Facts: Scrape and Convert to HTML Table with Pandas
 
     # In[98]:
@@ -215,8 +218,7 @@ def scrape():
     html_table.replace('\n', '')
 
     # Add the Mars facts table to the dictionary
-    mars_data["mars_table"] = mars_table
+    mars_data["mars_table"] = html_table
 
     # Return the dictionary
     return mars_data
-
